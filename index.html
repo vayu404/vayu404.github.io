@@ -1,1 +1,94 @@
 https://vayu404.github.io/
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>나의 프로필</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #ffffff);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .profile-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #4f74ff;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #4f74ff;
+    }
+    p {
+      margin: 10px 0 20px;
+      line-height: 1.6;
+    }
+    .links a {
+      text-decoration: none;
+      color: #4f74ff;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    .links a:hover {
+      color: #1a3cff;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-badge {
+      background: #4f74ff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="프로필 이미지" class="profile-img" />
+    <h1>홍길동</h1>
+    <p>안녕하세요! 저는 웹 개발을 사랑하는 프론트엔드 개발자 홍길동입니다.  
+       사용자에게 더 좋은 경험을 제공하기 위해 항상 고민하고 배우고 있습니다.</p>
+    <div class="links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://yourblog.com" target="_blank">Blog</a>
+    </div>
+    <div class="skills">
+      <span class="skill-badge">HTML</span>
+      <span class="skill-badge">CSS</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">React</span>
+    </div>
+  </div>
+  <footer>&copy; 2025 홍길동</footer>
+</body>
+</html>
