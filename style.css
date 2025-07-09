@@ -1,22 +1,20 @@
 body {
-  margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #121212;
-  color: #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 20px;
+  display: flex; /* flex로 설정해서 자식 요소들을 한 줄에 나란히 배치 */
+  flex-direction: row; /* 기본값이 row라 따로 안 써도 되지만, 명확하게 쓰면 좋음 */
+  justify-content: center; /* 필요하다면 가로 가운데 정렬 */
+  align-items: center;     /* 필요하다면 세로 가운데 정렬 */
 }
 
+/* 큰틀 */
 .profile-card {
   background: #1e1e1e;
-  padding: 40px 30px;
+  padding: 60px 30px;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  /* box-shadow: 0 8px 30px rgba(0,0,0,0.6); */
   max-width: 100%;
-  width: 100%;
-  height: 100vh; 
+  width: 40%;
+  height: 86vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +25,24 @@ body {
   border-radius: 0; 
 }
 
+.project {
+  background: #121212;
+  width: 90%;
+  height: 86vh; /* 프로필 카드와 같은 높이로 맞추려면 추가 */
+}
+
+footer {
+  width: 100%;
+  height: 10vh; /* 프로필 카드와 같은 높이로 맞추려면 추가 */
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: auto; /* 가로 중앙 정렬을 위한 추가 */
+  margin-right: auto; /* 가로 중앙 정렬을 위한 추가 */
+  text-align: center; /* 글자를 수평 가운데 정렬 */
+}
+
+
+/* profile-cord 내부 */
 .profile-card:hover {
   transform: none; 
 }
@@ -53,6 +69,8 @@ p {
   color: #cccccc;
 }
 
+/* 깃허브,블로그 링크 */
+
 .links a {
   text-decoration: none;
   color: #ffffff;
@@ -67,6 +85,8 @@ p {
   padding: 4px 10px;
   border-radius: 6px;
 }
+
+/* 사용 가능 스킬 */
 
 .skills {
   display: flex;
@@ -84,13 +104,14 @@ p {
   font-size: 0.95rem;
 }
 
-footer {
-  margin-top: 60px;
-  font-size: 0.9rem;
-  color: #666;
-}
+
+
+/* ing */
+
+
 
 .projects {
+
   background: #1e1e1e;
   padding: 40px 30px;
   border-radius: 20px;
@@ -98,6 +119,9 @@ footer {
   max-width: 700px;
   width: 100%;
   margin-top: 50px;
+
+  margin-left: auto; /* 가로 중앙 정렬을 위한 추가 */
+  margin-right: auto; /* 가로 중앙 정렬을 위한 추가 */
 }
 
 .projects h2 {
@@ -152,6 +176,8 @@ footer {
 }
 
 
+/* GitHub 모달창 */
+
 .modal {
   display: none;
   position: fixed;
@@ -191,5 +217,67 @@ footer {
 }
 
 .modal-content button:hover {
+  background-color: #cccccc;
+}
+
+/* ing 내용 모달창 */
+
+.modal_2 {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal_2 {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal_2-content {
+  position: relative;
+  background: #1e1e1e;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  margin: 2% auto;
+  width: 95%;
+  max-width: 1200px;
+  height: 90%;       
+  overflow-y: auto;   
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_2-content p {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  flex: 1;  
+  overflow-y: auto;
+}
+
+.modal_2-content button {
+  padding: 10px 22px;
+  border: none;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.modal_2-content button:hover {
   background-color: #cccccc;
 }
