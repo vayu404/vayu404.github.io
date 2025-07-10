@@ -3,6 +3,8 @@ function openProjectModal(projectId) {
     1: "우리은행 Fisa 프로젝트",
     2: "혈당 관리 어플리케이션",
     3: "IoT 기반 낙상 감지 지팡이"
+    4: "프로젝트"
+    5: "프로젝트"
   };
   document.getElementById("projectModalContent").innerText = content[projectId];
   document.getElementById("projectModal").style.display = "block";
